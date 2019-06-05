@@ -14,13 +14,26 @@ require("session.php")
 		{
 			if(isset($_POST['gebr']) && isset($_POST['ww']))
 			{
-				if($_POST['gebr'] === "admin" && $_POST['ww'] === "#1Geheim")
+				require '../php/config.php';
+
+				$GebrNaam = $_POST['gebr'];
+				$WW = sha1($_POST['ww']);
+
+				$query = "select * from Login
+				where Gebruikersnaam = '".$GebrNaam."'
+				and Wachtwoord = '".$WW."'";
+
+				$result = mysqli_query($mysqli, $opg);
+
+				if(mysqli_num_rows($result) > 0)
 				{
-					$_SESSION['gebr'] = $_POST['gebr'];
+					$user = mysqli_fetch_array($result);
+
+					//zet in een seesion
+					$_SESSION['gebr'] = $user['Gebruikersnaam'];
+
 					$_SESSION['ip'] = $_SERVER['REMOTE_ADDR'];
-
 					header("location: .php"); /*!!! VERANDER LOCATION NAAR BEHOREN !!!*/
-
 					$_SESSION['timestamp'] = time();
 
 				}
@@ -28,6 +41,8 @@ require("session.php")
 				{
 					header("location: uitlog.php");
 				}
+
+
 			}
 			else
 			{
