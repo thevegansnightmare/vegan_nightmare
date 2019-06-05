@@ -1,6 +1,6 @@
 <?php
 // database logingegevens
-$db_hostname = 'localhost';
+$db_hostname = '192.168.88.45';
 $db_username = 'vampire1';
 $db_password = '#1Geheim';
 $db_database = 'vampire';
