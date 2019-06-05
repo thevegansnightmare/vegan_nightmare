@@ -33,7 +33,7 @@ require("session.php")
 					$_SESSION['gebr'] = $user['Gebruikersnaam'];
 
 					$_SESSION['ip'] = $_SERVER['REMOTE_ADDR'];
-					header("location: .php"); /*!!! VERANDER LOCATION NAAR BEHOREN !!!*/
+					header("location: "); /*!!! VERANDER LOCATION NAAR BEHOREN !!!*/
 					$_SESSION['timestamp'] = time();
 
 				}
