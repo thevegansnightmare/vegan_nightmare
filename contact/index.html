@@ -16,7 +16,7 @@
       <ul class="menuul">
         <li>
           <main class="container">
-            <a class="myButt one" href="index.html">
+            <a class="myButt one" href="../index.html">
               <div class="insider"></div>
               Home
             </a>
@@ -41,7 +41,7 @@
 
         <li>
           <main class="container">
-            <a class="myButt one" href="../contact/index.html">
+            <a class="myButt one" href="index.html">
               <div class="insider"></div>
               Contact
             </a>
@@ -66,65 +66,69 @@
       </ul>
     </div>
     <div><!-- img --></div>
-
-    <form
-      class="c-form u-inline"
-      method="post"
-      action="php/contact_verwerk.php"
-      style="margin-top:120px;"
-    >
-      <fieldset class="c-form__fieldset">
-        <legend class="c-form__title u-uppercase">Ask the undead</legend>
-        <div class="c-field">
-          <input
-            class="c-field__input"
-            type="text"
-            name="name"
-            placeholder="Name"
-            value=""
-            required="required"
-          />
-          <label class="c-field__label u-uppercase" for="name">Name</label>
-        </div>
-        <div class="c-field">
-          <input
-            class="c-field__input"
-            type="email"
-            name="email"
-            placeholder="Email"
-            maxlength="255"
-            value=""
-            required="required"
-          />
-          <label class="c-field__label u-uppercase" for="email">Email</label>
-        </div>
-        <div class="c-field">
-          <input
-            class="c-field__input"
-            type="text"
-            name="subject"
-            placeholder="What's up?"
-            value=""
-          />
-          <label class="c-field__label u-uppercase" for="subject"
-            >Subject</label
-          >
-        </div>
-        <div class="c-field">
-          <textarea
-            class="c-field__textarea"
-            name="msg"
-            rows="6"
-            cols="50"
-            placeholder="Ask me anything!"
-            required="required"
-          ></textarea>
-          <label class="c-field__label u-uppercase" for="msg">Message</label>
-        </div>
-        <div class="c-field">
-          <input class="c-btn u-uppercase" type="submit" name="verzend" value="Hit me" />
-        </div>
-      </fieldset>
-    </form>
+    <div id="content">
+      <form
+        class="c-form u-inline"
+        method="post"
+        action="php/contact_verwerk.php"
+        style="margin-top:120px;"
+      >
+        <fieldset class="c-form__fieldset">
+          <legend class="c-form__title u-uppercase">Ask the undead</legend>
+          <div class="c-field">
+            <input
+              class="c-field__input"
+              type="text"
+              name="name"
+              placeholder="Name"
+              value=""
+              required="required"
+            />
+            <label class="c-field__label u-uppercase" for="name">Name</label>
+          </div>
+          <div class="c-field">
+            <input
+              class="c-field__input"
+              type="email"
+              name="email"
+              placeholder="Email"
+              maxlength="255"
+              value=""
+              required="required"
+            />
+            <label class="c-field__label u-uppercase" for="email">Email</label>
+          </div>
+          <div class="c-field">
+            <input
+              class="c-field__input"
+              type="text"
+              name="subject"
+              placeholder="What's up?"
+              value=""
+            />
+            <label class="c-field__label u-uppercase" for="subject"
+              >Subject</label
+            >
+          </div>
+          <div class="c-field">
+            <textarea
+              class="c-field__textarea"
+              name="msg"
+              rows="6"
+              cols="50"
+              placeholder="Ask me anything!"
+              required="required" 
+            ></textarea>
+            <label class="c-field__label u-uppercase" for="msg">Message</label>
+          </div>
+          <div class="c-field insider">
+            <a class="myButt two"
+              ><div class="insider"></div>
+              <input class="c-btn u-uppercase" type="submit" name="verzend" value="Hit me" />
+            </a>
+          </div>
+        </fieldset>
+      </form>
+    </div>
   </body>
 </html>
