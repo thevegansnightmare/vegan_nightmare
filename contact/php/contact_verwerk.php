@@ -14,6 +14,13 @@ if(isset($_POST['verzend']))
       $naam = $_POST['name'];
       $msg = $_POST['msg'];
       $ond = $_POST['subject'];
+      //mailto vars
+      $to = $email;
+      $mailinhoud = "$naam
+
+$ond
+
+$msg";
       //als onderwerp leeg is
       if($ond == "")
       {
@@ -23,13 +30,18 @@ if(isset($_POST['verzend']))
         //als query goed is uitgevoerd
         if(mysqli_query($mysqli, $query) == true)
         {
-          echo "<p>Uw bericht is verzonden en ontvangen</p><br>";
-          echo "<p><a href='../../index.html'>Hier</a> kunt u terug gaan naar de Homepage van de site</p><br>";
+          echo "<p>Uw bericht is verzonden en ontvangen.</p><br>";
+          echo "<p><a href='../../index.html'>Hier</a> kunt u terug gaan naar de Homepage van de site.</p><br>";
+
+          if(!empty($_POST))
+          {
+            mail($to, $ond, $mailinhoud);
+          }
         }
         else
         {
-          echo "<p>Uw bericht is niet verzonden, er is een fout in het verzenden</p><br>";
-          echo "<p><a href='../../index.html'>Hier</a> kunt u terug gaan naar de Homepage van de site</p><br>";
+          echo "<p>Uw bericht is niet verzonden, er is een fout in het verzenden.</p><br>";
+          echo "<p><a href='../../index.html'>Hier</a> kunt u terug gaan naar de Homepage van de site.</p><br>";
         }
 
       }
@@ -42,8 +54,13 @@ if(isset($_POST['verzend']))
         //als query goed is uitgevoerd
         if(mysqli_query($mysqli, $query) == true)
         {
-          echo "<p>Uw bericht is verzonden en ontvangen</p><br>";
-          echo "<p><a href='../../index.html'>Hier</a> kunt u terug gaan naar de Homepage van de site</p><br>";
+          echo "<p>Uw bericht is verzonden en ontvangen, er is ook een mail gestuurd naar  u.</p><br>";
+          echo "<p><a href='../../index.html'>Hier</a> kunt u terug gaan naar de Homepage van de site.</p><br>";
+
+          if(!empty($_POST))
+          {
+            mail($to, $ond, $mailinhoud);
+          }
         }
         else
         {
