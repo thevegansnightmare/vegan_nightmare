@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Resizable Contact Form #GDGHamburg</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed:400,500,600,700,800,900"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <div class="menudiv">
+      <ul class="menuul">
+        <li>
+          <main class="container">
+            <a class="myButt one" href="index.html">
+              <div class="insider"></div>
+              Home
+            </a>
+          </main>
+        </li>
+        <li>
+          <main class="container">
+            <a class="myButt one" href="../overons/index.html">
+              <div class="insider"></div>
+              Over ons
+            </a>
+          </main>
+        </li>
+        <li>
+          <main class="container">
+            <a class="myButt one" href="../characters/index.html">
+              <div class="insider"></div>
+              Characters
+            </a>
+          </main>
+        </li>
+
+        <li>
+          <main class="container">
+            <a class="myButt one" href="../contact/index.html">
+              <div class="insider"></div>
+              Contact
+            </a>
+          </main>
+        </li>
+        <li>
+          <main class="container">
+            <a class="myButt one" href="../inlog/index.html">
+              <div class="insider"></div>
+              Inlog
+            </a>
+          </main>
+        </li>
+        <li>
+          <main class="container menu-game">
+            <button class="myButt five">
+              <div class="layer">Diee!</div>
+              Game
+            </button>
+          </main>
+        </li>
+      </ul>
+    </div>
+    <div><!-- img --></div>
+
+    <form
+      class="c-form u-inline"
+      method="post"
+      action=""
+      style="margin-top:120px;"
+    >
+      <fieldset class="c-form__fieldset">
+        <legend class="c-form__title u-uppercase">Ask the undead</legend>
+        <div class="c-field">
+          <input
+            class="c-field__input"
+            type="text"
+            name="name"
+            placeholder="Name"
+            value=""
+            required="required"
+          />
+          <label class="c-field__label u-uppercase" for="name">Name</label>
+        </div>
+        <div class="c-field">
+          <input
+            class="c-field__input"
+            type="email"
+            name="email"
+            placeholder="Email"
+            maxlength="255"
+            value=""
+            required="required"
+          />
+          <label class="c-field__label u-uppercase" for="email">Email</label>
+        </div>
+        <div class="c-field">
+          <input
+            class="c-field__input"
+            type="text"
+            name="subject"
+            placeholder="What's up?"
+            value=""
+          />
+          <label class="c-field__label u-uppercase" for="subject"
+            >Subject</label
+          >
+        </div>
+        <div class="c-field">
+          <textarea
+            class="c-field__textarea"
+            name="msg"
+            rows="6"
+            cols="50"
+            placeholder="Ask me anything!"
+            required="required"
+          ></textarea>
+          <label class="c-field__label u-uppercase" for="msg">Message</label>
+        </div>
+        <div class="c-field">
+          <input class="c-btn u-uppercase" type="submit" value="Hit me" />
+        </div>
+      </fieldset>
+    </form>
+  </body>
+</html>
