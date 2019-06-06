@@ -26,6 +26,8 @@
 
       while($rij = mysqli_fetch_array($result))
       {
+        echo "<img src='../img/".$rij['img']."' alt='".$rij['img']."' />";
+
         echo "<table border='1'>";
 
         echo "<tr><th>Character Naam&colon; </th>
