@@ -31,18 +31,18 @@
         echo "<tr><th>Character Naam&colon; </th>
         <td>".$rij['Char_Naam']."</td></tr>";
 
-        echo "<tr><th>Achtergrond verhaal Naam&colon; </th>
+        echo "<tr><th>Achtergrond verhaal&colon; </th>
         <td>".$rij['Backstory']."</td></tr>";
 
-        echo "<tr><th rowspan='3'>Stats Naam&colon; </th>
+        echo "<tr><th rowspan='3'>Stats&colon; </th>
         <td>
-        <div class='progress'><div class='progress-bar' style='width: ".$rij['Offensive']."%' aria-valuenow='".$rij['Offensive']."' aria-valuemin='0' aria-valuemax='100'></div></div> ".$rij['Offensive']."&percnt;</td></tr>";
+        <div class='progress'><div class='progress-bar' role='progressbar' style='width: ".$rij['Offensive']."%' aria-valuenow='".$rij['Offensive']."' aria-valuemin='0' aria-valuemax='100'></div></div> ".$rij['Offensive']."&percnt;</td></tr>";
 
         echo "<tr><td>
-        <div class='progress'><div class='progress-bar' style='width: ".$rij['Defensive']."%' aria-valuenow='".$rij['Defensive']."' aria-valuemin='0' aria-valuemax='100'></div></div> ".$rij['Defensive']."&percnt;</td></tr>";
+        <div class='progress'><div class='progress-bar' role='progressbar' style='width: ".$rij['Defensive']."%' aria-valuenow='".$rij['Defensive']."' aria-valuemin='0' aria-valuemax='100'></div></div> ".$rij['Defensive']."&percnt;</td></tr>";
 
         echo "<tr><td>
-        <div class='progress'><div class='progress-bar' style='width: ".$rij['Tactical']."%' aria-valuenow='".$rij['Tactical']."' aria-valuemin='0' aria-valuemax='100'></div></div> ".$rij['Tactical']."&percnt;</td></tr>";
+        <div class='progress'><div class='progress-bar' role='progressbar' style='width: ".$rij['Tactical']."%' aria-valuenow='".$rij['Tactical']."' aria-valuemin='0' aria-valuemax='100'></div></div> ".$rij['Tactical']."&percnt;</td></tr>";
 
         echo "</table>";
         echo "<hr>";
