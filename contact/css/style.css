@@ -50,12 +50,45 @@
   -ms-transition: all 0.7s ease;
   left: 135px;
 }
+/* TWWWWOO */
+.two {
+  border-color: #222;
+  overflow: hidden;
+  color: green;
+}
+.two .insider {
+  background-color: green;
+  width: 100%;
+  height: 20px;
+  position: absolute;
+  left: -135px;
+  transform: rotateZ(45deg);
+  -webkit-transform: rotateZ(45deg);
+  -moz-transform: rotateZ(45deg);
+  -o-transform: rotateZ(45deg);
+  -ms-transform: rotateZ(45deg);
+}
+.two:hover {
+  /* background-color: #1cca1c; //BACKGROUN COLOR BUTTON */
+  border-radius: 20px;
+  border-color: #222; // BORDER COLOR
+  color: #222; // TEKST COLOR
+}
+.two:hover .insider {
+  transition: all 0.6s ease;
+  -webkit-transition: all 0.7s ease;
+  -moz-transition: all 0.7s ease;
+  -o-transition: all 0.7s ease;
+  -ms-transition: all 0.7s ease;
+  left: 135px;
+  background-color: rgb(99, 0, 0);
+}
 /*############ Eind button 1  */
 /*############  button 5  */
 
 .five {
   overflow: hidden;
-  color: red;
+  color: rgb(170, 0, 0);
 }
 .five .layer {
   color: rgb(230, 99, 99);
@@ -135,9 +168,9 @@ a {
 }
 
 a:hover {
-  color: red;
+  color: rgb(170, 0, 0);
   border-bottom-style: solid;
-  border-bottom-color: red;
+  border-bottom-color: rgb(200, 0, 0);
   border-bottom-width: 2px;
   transition: all 150ms linear;
   -webkit-transition: all 150ms linear;
@@ -274,7 +307,6 @@ body {
 :root {
   --color_luchador: #dcdcdc;
   --color_outline: #b5b5b4;
-  --color_txt: white;
   --color_base: #222;
   --color_accent: rgb(110, 0, 0);
 }
@@ -283,7 +315,7 @@ body {
   box-sizing: border-box;
 }
 
-body {
+#content {
   min-width: 20rem;
   background-color: var(--color_base);
   text-align: center;
@@ -430,9 +462,10 @@ body {
   margin-top: -28px;
 }
 .c-form__fieldset {
-  border-color: rgba(0, 0, 0, 0.1);
+  border-color: rgba(249, 245, 245, 0.63);
   border-radius: 5px;
 }
+
 .c-form__title {
   font-size: 3.125rem;
   font-weight: 900;
@@ -526,7 +559,7 @@ body {
   -moz-appearance: none;
   appearance: none;
   border-radius: 10px;
-  background-color: rgba(0, 0, 0, 0.05);
+  background-color: rgba(249, 245, 245, 0.12);
   border: 0;
   color: var(--color_txt);
   cursor: pointer;
@@ -545,4 +578,7 @@ body {
   letter-spacing: 1px;
 }
 
-/* MENUUU */
+.text1
+{
+  color: green;
+}
