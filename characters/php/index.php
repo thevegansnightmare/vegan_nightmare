@@ -21,7 +21,7 @@
     <title>Characters</title>
   </head>
   <body>
-    <div class="menudiv" style="margin-top:-90px;">
+    <div class="menudiv">
       <ul class="menuul">
         <li>
           <main class="container">
@@ -88,14 +88,15 @@
     }
     else
     {
-
+      echo "<div style='margin: 150px auto;'></div>";
       while($rij = mysqli_fetch_array($result))
       {
-        echo "<div class='container row'>";
+
+        echo "<div class='container row' style='width: 1500px; margin: 0px auto;'>";
 
         echo "<img class='col-4' src='../../images/".$rij['img']."' alt='".$rij['img']."' />";
 
-        echo "<table class='col-8' border='1'>";
+        echo "<table class='col-8 flat-table flat-table-2'>";
 
         echo "<tr><th>Character Naam&colon; </th>
         <td>".$rij['Char_Naam']."</td></tr>";
