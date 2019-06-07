@@ -4,12 +4,77 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="/index-style.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=VT323&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/style.css">
     <script src="../js/jquery-3.3.1.min.js" type="text/javascript"></script>
     <script src="../js/bootstrap.min.js"></script>
     <title>Characters</title>
   </head>
   <body>
+    <div class="menudiv" style="margin-top:-90px;">
+      <ul class="menuul">
+        <li>
+          <main class="container">
+            <a class="myButt one" href="/index.html">
+              <div class="insider"></div>
+              Home
+            </a>
+          </main>
+        </li>
+        <li>
+          <main class="container">
+            <a class="myButt one" href="/overons/index.html">
+              <div class="insider"></div>
+              Over ons
+            </a>
+          </main>
+        </li>
+        <li>
+          <main class="container">
+            <a class="myButt one" href="index.php">
+              <div class="insider"></div>
+              Characters
+            </a>
+          </main>
+        </li>
+
+        <li>
+          <main class="container">
+            <a class="myButt one" href="/contact/index.html">
+              <div class="insider"></div>
+              Contact
+            </a>
+          </main>
+        </li>
+        <li>
+          <main class="container">
+            <a class="myButt one" href="/inlog_uitlog/index.html">
+              <div class="insider"></div>
+              Inlog
+            </a>
+          </main>
+        </li>
+        <li>
+          <main class="container">
+            <a class="myButt one" href="/game/index.html" style="color:red">
+              <div class="insider"></div>
+              Game
+            </a>
+          </main>
+        </li>
+      </ul>
+    </div>
+
     <?php
     require "config.php";
     //alles ophalen uit DB
@@ -26,7 +91,11 @@
 
       while($rij = mysqli_fetch_array($result))
       {
-        echo "<table border='1'>";
+        echo "<div class='container row'>";
+
+        echo "<img class='col-4' src='../../images/".$rij['img']."' alt='".$rij['img']."' />";
+
+        echo "<table class='col-8' border='1'>";
 
         echo "<tr><th>Character Naam&colon; </th>
         <td>".$rij['Char_Naam']."</td></tr>";
@@ -45,6 +114,7 @@
         <div class='progress'><div class='progress-bar bg-success' role='progressbar' style='width: ".$rij['Tactical']."%' aria-valuenow='".$rij['Tactical']."' aria-valuemin='0' aria-valuemax='100'></div></div>Taktisch&colon; ".$rij['Tactical']."&percnt;</td></tr>";
 
         echo "</table>";
+        echo "</div>";
         echo "<hr>";
       }
 

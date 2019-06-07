@@ -1,0 +1,226 @@
+* {
+  font-family: Helvetica, sans-serif;
+}
+/*##########Button 1  */
+.myButt {
+  outline: none;
+  border: none;
+  padding: 20px;
+  display: block;
+  cursor: pointer;
+  font-size: 20px;
+  background-color: transparent;
+  position: relative;
+
+  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+}
+
+.one {
+  border-color: #222;
+  overflow: hidden;
+  color: green;
+}
+.one .insider {
+  background-color: #1cca1c;
+  width: 100%;
+  height: 20px;
+  position: absolute;
+  left: -135px;
+  transform: rotateZ(45deg);
+  -webkit-transform: rotateZ(45deg);
+  -moz-transform: rotateZ(45deg);
+  -o-transform: rotateZ(45deg);
+  -ms-transform: rotateZ(45deg);
+}
+.one:hover {
+  /* background-color: #1cca1c; //BACKGROUND COLOR BUTTON */
+  border-radius: 20px;
+  border-color: #222; // BORDER COLOR
+  color: #222; // TEKST COLOR
+}
+.one:hover .insider {
+  transition: all 0.6s ease;
+  -webkit-transition: all 0.7s ease;
+  -moz-transition: all 0.7s ease;
+  -o-transition: all 0.7s ease;
+  -ms-transition: all 0.7s ease;
+  left: 135px;
+}
+/*############ Eind button 1  */
+/*############  button 5  */
+
+.five {
+  overflow: hidden;
+  color: red;
+}
+.five .layer {
+  color: rgb(230, 99, 99);
+  position: absolute;
+  top: -70px;
+  width: 100%;
+  left: 0;
+  padding: 20px 0;
+  background-color: rgb(99, 0, 0);
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+}
+.five:hover .layer {
+  top: 0;
+}
+
+/*############ Eind button 5  */
+
+body {
+  font-family: "arial";
+  margin-top: -10px;
+  font-size: 20px;
+  padding: 0;
+  background-color: #222;
+}
+
+.menudiv {
+  position: fixed;
+  left: 0;
+  right: 0;
+  background-color: #222;
+  z-index: 1;
+}
+
+.menuul {
+  margin: 0;
+  padding: 10px;
+  list-style: none;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  box-shadow: 0 0 20px black;
+  transition: all 200ms linear;
+  -webkit-transition: all 200ms linear;
+  -moz-transition: all 200ms linear;
+  -ms-transition: all 200ms linear;
+  -o-transition: all 200ms linear;
+}
+
+.menuul:hover {
+  border-bottom-color: green;
+  box-shadow: 0 0 140px green;
+  transition: all 200ms linear;
+  -webkit-transition: all 200ms linear;
+  -moz-transition: all 200ms linear;
+  -ms-transition: all 200ms linear;
+  -o-transition: all 200ms linear;
+}
+
+li {
+  display: inline-block;
+  padding: 5px;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+  border-bottom-style: solid;
+  border-bottom-color: transparent;
+  border-bottom-width: 0px;
+  transition: all 150ms linear;
+  -webkit-transition: all 150ms linear;
+  -moz-transition: all 150ms linear;
+  -ms-transition: all 150ms linear;
+  -o-transition: all 150ms linear;
+}
+
+a:hover {
+  text-decoration: none !important;
+  color: red !important;
+  border-bottom-style: solid;
+  border-bottom-color: red;
+  border-bottom-width: 2px;
+  transition: all 150ms linear;
+  -webkit-transition: all 150ms linear;
+  -moz-transition: all 150ms linear;
+  -ms-transition: all 150ms linear;
+  -o-transition: all 150ms linear;
+}
+.menu-game {
+  position: absolute;
+  top: 8px;
+  right: 16px;
+  padding: 10px;
+  border-radius: 5px;
+  color: black;
+}
+body {
+  background: black;
+    color: red;
+}
+h1 {
+  color: white;
+  margin: 40px 0 0 0;
+  font-size: 85px;
+}
+h1,
+h2 {
+  text-align: center;
+  text-shadow: 5px 4px 4px darkslategray;
+  font-family: "Creepster", serif;
+}
+h2 {
+  font-size: 60px;
+  color: lightgray;
+}
+.menudiv {
+  top: 0;
+}
+button {
+  background: #9aa73d;
+  width: 150px;
+  display: block;
+  margin: 60px auto 40px auto;
+  border: none;
+  text-align: center;
+  color: white;
+  border-radius: 4px;
+  padding: 20px;
+  font-size: 16px;
+  font-family: "Work Sans", sans-serif;
+}
+.zombie {
+  margin: 0 auto;
+  width: 100%;
+  -webkit-animation: rise infinite 2s ease-in-out;
+  animation: rise infinite 2s ease-in-out;
+}
+@-webkit-keyframes rise {
+  0% {
+    -webkit-transform: translatey(100px);
+    transform: translatey(100px);
+  }
+  50% {
+    -webkit-transform: translatey(0);
+    transform: translatey(0);
+  }
+  100% {
+    -webkit-transform: translatey(100px);
+    transform: translatey(100px);
+  }
+}
+@keyframes rise {
+  0% {
+    -webkit-transform: translatey(100px);
+    transform: translatey(100px);
+  }
+  50% {
+    -webkit-transform: translatey(0);
+    transform: translatey(0);
+  }
+  100% {
+    -webkit-transform: translatey(100px);
+    transform: translatey(100px);
+  }
+}
